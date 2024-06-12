@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use App\Models\Train;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('trains', function () {
-    $trains = Train::all();
+    $trains = Train::where('departure_time', '>=', now())->get();
+
+    // $trains = Train::all();
     return view('trains', compact('trains'));
 })->name('trains');

@@ -13,6 +13,7 @@
                 <table class="table table-warning table-striped table-hover">
                     <thead>
                         <tr>
+                            <th scope="col">#</th>
                             <th scope="col">N. Treno</th>
                             <th scope="col">Azienda</th>
                             <th scope="col">Stazione di partenza</th>
@@ -25,9 +26,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($trains as $train)
+                        @foreach ($trains as $index => $train)
                             <tr>
-                                <th scope="row">{{ $train->train_code }}</th>
+                                <th scope="row">{{ $index + 1 }}</th>
+                                <td>{{ $train->train_code }}</td>
                                 <td>{{ $train->company }}</td>
                                 <td>{{ $train->departure_station }}</td>
                                 <td>{{ $train->arrival_station }}</td>

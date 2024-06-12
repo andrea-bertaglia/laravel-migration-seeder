@@ -20,7 +20,7 @@ class TrainsTableSeeders extends Seeder
             $newTrain->company = $faker->randomElement(['Trenitalia', 'Italo', 'Trenord', 'OBB']);
             $newTrain->departure_station = $faker->city();
             $newTrain->arrival_station = $faker->city();
-            $newTrain->departure_time = $faker->dateTimeInInterval('-1 week', '+1 week');
+            $newTrain->departure_time = $faker->dateTimeBetween('-1 week', '+1 week');
             $newTrain->arrival_time = $faker->dateTimeInInterval('-1 week', '+1 week');
             $newTrain->train_code = $faker->numberBetween(1000, 9999);
             $newTrain->number_of_carriages = $faker->numberBetween(1, 12);

@@ -31,3 +31,9 @@ Create Model relativo ed un Controller per mostrare nella home page tutti i tren
 ### Bonus:
 
 Abbellite il tutto usando SASS.
+
+### SECONDA PARTE
+
+Nella stessa repo aggiungete il seeder che utilzza Faker per popolare la tabella trains. Cercate metodi che vi permettono di ottenere i dati più realistici.
+
+Infine stampate in pagina i treni che partono da oggi in poi.

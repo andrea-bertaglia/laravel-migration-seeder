@@ -6,7 +6,9 @@
 
 
 @section('content')
-    <h1 class="text-center py-5">Treni di oggi <span class="fw-bold">{{ date('d/m/Y') }}</span></h1>
+    <h1 class="text-center py-5">Treni dal <span class="fw-bold">{{ date('d/m/Y') }}</span> al
+        <span class="fw-bold">{{ date('d/m/Y', strtotime('+7 days')) }}</span>
+    </h1>
     <div class="container">
         <div class="row">
             <div class="col">
